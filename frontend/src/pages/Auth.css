@@ -1,0 +1,45 @@
+.auth-page { min-height: calc(100vh - 78px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(440px, .9fr); background: #fff; }
+.auth-visual { background: radial-gradient(circle at 20% 15%, #3766d7 0, transparent 35%), linear-gradient(145deg, #102b69 0%, #173b89 55%, #2c57b7 100%); color: white; padding: clamp(36px, 6vw, 88px); display: flex; align-items: center; overflow: hidden; position: relative; }
+.auth-visual::after { content: ""; position: absolute; width: 450px; height: 450px; border: 1px solid #ffffff16; border-radius: 50%; right: -180px; bottom: -180px; }
+.auth-visual__content { max-width: 510px; margin: auto; position: relative; z-index: 1; width: 100%; }
+.auth-visual h1 { font-size: clamp(36px, 4.2vw, 58px); line-height: 1.1; margin: 0 0 20px; color: #fff; }
+.auth-visual__content > p:last-child { max-width: 420px; line-height: 1.8; color: #d5e0ff; font-size: 15px; }
+.auth-illustration { height: 245px; position: relative; margin-bottom: 38px; display: grid; place-items: center; }
+.illustration-orbit { position: absolute; border: 1px solid #ffffff35; border-radius: 50%; transform: rotate(-18deg); }
+.orbit-one { width: 300px; height: 190px; }
+.orbit-two { width: 370px; height: 225px; transform: rotate(30deg); }
+.illustration-ticket { background: white; color: var(--ink); width: 230px; border-radius: 17px; padding: 20px 23px; box-shadow: 0 25px 55px #071c4b55; transform: rotate(-4deg); display: flex; flex-direction: column; gap: 8px; }
+.illustration-ticket span { color: #7c8aa5; font-size: 9px; font-weight: 800; letter-spacing: .16em; }
+.illustration-ticket strong { font: 800 34px Manrope,sans-serif; color: #2854cf; }
+.illustration-ticket small { color: #75829a; }
+.ticket-progress { height: 5px; border-radius: 10px; background: #e7edfc; overflow: hidden; margin-top: 8px; }
+.ticket-progress i { display: block; width: 67%; height: 100%; border-radius: 10px; background: #3c6bf0; }
+.floating-chip { position: absolute; background: #ffffffed; color: #25447e; border-radius: 9px; padding: 10px 13px; box-shadow: 0 8px 22px #0c245a33; font-size: 11px; font-weight: 700; }
+.chip-one { left: 0; top: 45px; transform: rotate(-5deg); }
+.chip-two { right: 0; bottom: 30px; transform: rotate(4deg); }
+.auth-panel { display: flex; align-items: center; justify-content: center; padding: 55px clamp(28px, 5vw, 75px); }
+.auth-form-wrap { width: 100%; max-width: 430px; }
+.auth-form-wrap h2 { font-size: 32px; margin: 0 0 10px; }
+.auth-subtitle { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+.form-stack { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.auth-switch { margin: 25px 0 0; text-align: center; font-size: 13px; color: #71809a; }
+.auth-switch a { color: var(--primary); font-weight: 800; }
+.auth-footnote { margin: 26px auto 0; max-width: 330px; text-align: center; font-size: 11px; line-height: 1.7; color: #a0a9b8; }
+.auth-mobile-brand { display: none; align-items: center; gap: 10px; margin-bottom: 30px; font: 800 19px Manrope,sans-serif; }
+.register-graphic { height: 245px; position: relative; margin-bottom: 38px; display: grid; place-items: center; }
+.graphic-circle { position: absolute; border-radius: 50%; border: 1px solid #ffffff30; }
+.circle-a { width: 260px; height: 260px; }
+.circle-b { width: 190px; height: 190px; background: #ffffff08; }
+.graphic-card { width: min(330px, 100%); background: white; color: var(--ink); border-radius: 17px; padding: 22px; display: flex; align-items: center; gap: 12px; box-shadow: 0 25px 55px #071c4b55; transform: rotate(-3deg); }
+.graphic-card > div { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.graphic-card b { font: 800 16px Manrope,sans-serif; }
+.graphic-card small { color: #7b879c; line-height: 1.5; }
+.graphic-check { background: #dff8eb; color: #13875b; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; font-weight: 800; }
+@media (max-width: 900px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-visual { display: none; }
+  .auth-panel { min-height: calc(100vh - 70px); padding: 38px 24px; }
+  .auth-mobile-brand { display: flex; }
+}
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } .auth-form-wrap h2 { font-size: 28px; } }
